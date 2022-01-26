@@ -1,0 +1,70 @@
+
+{
+     "daten": [ 
+
+            {
+                "id": 1,
+                "productName": "Rosen Reinigung",
+                "type": "cosmetics",
+                "unitPrice":"35,00",
+                "category":{
+                    "categoryId":1,
+                    "categoryName":"AKARI Classic"
+                }
+            },
+            {
+                "id": 2,
+                "productName": "Rosen Tonic",
+                "type": "cosmetics",
+                "unitPrice":"36,00",
+                "category":{
+                    "categoryId":1,
+                    "categoryName":"AKARI Classic"
+                }
+            },
+            {
+                "id": 3,
+                "productName": "Rosen Serum",
+                "type":"cosmetics" ,
+                "unitPrice":"63,00",
+                "category":{
+                    "categoryId":1,
+                    "categoryName":"AKARI Classic"
+                }
+            },
+            {
+                "id": 4,
+                "productName": "Rosen Creme",
+                "type": "cosmetics",
+                "unitPrice":"65,00",
+                "category":{
+                    "categoryId":1,
+                    "categoryName":"AKARI Classic"
+                }
+            },
+            {
+                "id": 5,
+                "productName": "Rosen Fluid",
+                "type": "cosmetics",
+                "unitPrice":"55,00",
+                "category":{
+                    "categoryId":1,
+                    "categoryName":"AKARI Classic"
+                }
+            },
+            {
+                "id": 6,
+                "productName": "Rosen Starterset",
+                "type": "cosmetics",
+                "unitPrice":"104,00",
+                "category":{
+                    "categoryId":1,
+                    "categoryName":"AKARI Classic"
+                }
+            }
+
+   
+
+     ]
+}
+

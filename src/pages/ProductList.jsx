@@ -5,14 +5,13 @@ import ProductService from '../services/productService';
 import { useDispatch } from 'react-redux';
 import { addToCart } from "../store/action/cartActions";
 import {toast} from  "react-toastify";
-import PRODUCT_DATA from '../utilities/list-of-data-products/PRODUCT_DATA';
 import styles from './ProductList.module.css';
 
 
 export default function ProductList() {
 
 
-    const productData = PRODUCT_DATA;
+   
      
   
 
@@ -28,7 +27,7 @@ export default function ProductList() {
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product))
-    toast.success(`${product.name.common}  hinzugefügt !`)
+    toast.success(`${product.productName}  hinzugefügt !`)
   };
 
  
@@ -37,8 +36,9 @@ export default function ProductList() {
       <Table celled >
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>produkt</Table.HeaderCell>
-            <Table.HeaderCell>preis</Table.HeaderCell>
+            <Table.HeaderCell>Produkt</Table.HeaderCell>
+            <Table.HeaderCell>Preis</Table.HeaderCell>
+            <Table.HeaderCell>Katagorie</Table.HeaderCell>
             <Table.HeaderCell>Header</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
@@ -46,10 +46,11 @@ export default function ProductList() {
         <Table.Body>
 
           {products.map((product) => (
-            <Table.Row key={product.name.common}>
-              <Table.Cell>{product.name.official}</Table.Cell>
-              <Table.Cell ><Link to={`/products/${product.name.common}`}>{product.name.common}</Link> </Table.Cell>
-              {/* <Table.Cell ><Link to={`/products/${product.productName}`}>{product.productName}</Link> </Table.Cell> */}
+            <Table.Row key={product.id}>
+              <Table.Cell ><Link to={`/products/${product.id}`}>{product.productName}</Link> </Table.Cell>
+              <Table.Cell ><Link to={`/products/${product.id}`}>{product.unitPrice}</Link> </Table.Cell>
+              <Table.Cell ><Link to={`/products/${product.id}`}>{product.category.categoryName}</Link> </Table.Cell>
+              
               <Table.Cell><Button onClick={ () => handleAddToCart(product) } > In den Warenkorb </Button></Table.Cell>
 
             </Table.Row>

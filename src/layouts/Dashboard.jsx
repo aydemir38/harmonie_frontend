@@ -1,4 +1,5 @@
 import React from "react";
+import '../App.css';
 import ProductList from "../pages/ProductList";
 import Categories from "./Categories";
 import { Grid } from "semantic-ui-react";
@@ -9,7 +10,8 @@ import { ToastContainer } from "react-toastify";
 import ProductAdd from "../pages/ProductAdd";
 import CommentService from "../services/CommentService";
 import Auth from "../pages/Auth";
-// import { Image} from 'semantic-ui-react'
+ import { Image} from 'semantic-ui-react'
+ import logo from '../../src/image/Logo farbig[1804].png';
 
 
 
@@ -24,20 +26,22 @@ export default function Dashboard() {
       <Grid >
         <Grid.Row >
           <Grid.Column  width={4}>
-            {/* <Image  spaced ="left"    src="/images/IMG_4507.JPG" size="massive"  ></Image> */}
+            <img src={logo}  alt='logo'/>
+            <Image  src='/images/Briefkopf.png' size='massive' />
             
              <Categories /> 
           </Grid.Column>
           <Grid.Column width={12}>
-            {/* <Image spaced = "right" src ="/images/Briefkopf.jpg " size="big" ></Image> */}
-          <h1>Nicht die Falte zählt sondern der Mensch</h1>
-           
+          
+          <h1 style={{fontFamily:"Parisienne",color:"violet",fontSize:"60px", textShadow:"2px 2px 4px"}}
+          >Nicht die <br></br> Falte zählt <br></br> sondern der <br></br> Mensch</h1>
+          
 
             <Routes>
               
                {/* <Route path="/" element={<Dashboard />} />  */}
               <Route path="/products" element={<ProductList />} />
-              <Route path="products/:name" element={<ProductDetail />} />
+              <Route path="products/:id" element={<ProductDetail />} />
               <Route path="/cart" element={<CartDetail />} />
               <Route path="/product/add" element={<ProductAdd />} />
               <Route path="/comments" element={<CommentService/>}/>

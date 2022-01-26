@@ -26,7 +26,12 @@ export default function ProductAdd() {
 
            <HarmonieTextInput  name="unitPrice" placeholder="productprice"/> 
 
-          {/* <FormField> (bu componentleri kendimiz utilities de tasarlayip yukarida iki satira düsürdük buraya gerek kalmadi)
+          {/*
+           (Wir haben die folgenden Komponenten selbst bei Utilities entworfen und
+           sie in den beiden Zeilen oben platziert, hier nicht erforderlich)
+           (bu componentleri kendimiz utilities de tasarlayip yukarida iki satira düsürdük buraya gerek kalmadi)
+
+           <FormField>
             <Field name="productName" placeholder="produktname"></Field>
 
             <ErrorMessage
